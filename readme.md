@@ -24,14 +24,22 @@ Supports modern Pi GPIO stacks:
   - Button 2: one leg → **GPIO27 (Pin 13)**, other leg → **GND**
 - Strongly recommended: **external 5V** for servo (share ground with Pi)
 
-# Verify buttons are seen (quick test)
+# Verify buttons are seen (quick test) copy paste
 python3 - <<'PY'
+
 from gpiozero import Button
+
 from time import sleep
+
 b1, b2 = Button(17, pull_up=True), Button(27, pull_up=True)
+
 b1.when_pressed = lambda: print("Button 1 pressed")
+
 b2.when_pressed = lambda: print("Button 2 pressed")
+
 print("Press buttons... (CTRL+C to exit)")
+
 while True: sleep(0.1)
+
 PY
 
