@@ -1,0 +1,12 @@
+
+> Tip: If the servo **twitches**, power it from an **external 5V** and **share GND** with the Pi.  
+> Also trim pulse range in code (e.g., 0.6–2.3 ms).
+
+---
+
+## Software
+
+### Install deps (Debian/Bookworm/Trixie)
+```bash
+sudo apt update
+sudo apt install -y python3-gpiozero python3-lgpio
